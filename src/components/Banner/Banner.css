@@ -14,3 +14,16 @@
     margin: 0 auto;
     max-width: 500px;
 }
+
+@media (max-width: 768px){
+    .banner{
+        height: 280px;
+    }
+    
+    .title-panel{
+        font-size: 32px;
+        height: 100px;
+        max-width: 90%;
+        border-radius: 20px 20px 0 0;
+    }
+}

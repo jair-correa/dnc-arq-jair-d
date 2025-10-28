@@ -20,6 +20,10 @@ function Header() {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
 
   return (
     <header>
@@ -44,16 +48,16 @@ function Header() {
             </Button>
             <ul className='d-flex'>
               <li>
-                <Link to='/'> {languages?.[language]?.menu?.home || 'Home'} </Link>
+                <Link to='/' onClick={closeMenu}> {languages?.[language]?.menu?.home || 'Home'} </Link>
               </li>
               <li>
-                <Link to='/about'> {languages?.[language]?.menu?.about || 'About'} </Link>
+                <Link to='/about' onClick={closeMenu}> {languages?.[language]?.menu?.about || 'About'} </Link>
               </li>
               <li>
-                <Link to='/projects'> {languages?.[language]?.menu?.projects || 'Projects'} </Link>
+                <Link to='/projects' onClick={closeMenu}> {languages?.[language]?.menu?.projects || 'Projects'} </Link>
               </li>
               <li>
-                <Link to='/contact'> {languages?.[language]?.menu?.contact || 'Contact'} </Link>
+                <Link to='/contact' onClick={closeMenu}> {languages?.[language]?.menu?.contact || 'Contact'} </Link>
               </li>
             </ul>
           </nav>

@@ -1,6 +1,12 @@
 .projects-section{
-    margin: 150px 0 ;
+    margin: 150px 0;
     text-align: center;
+}
+
+@media (max-width: 768px){
+    .projects-section{
+        margin: 80px 0;
+    }
 }
 
 .projects-hero{
@@ -14,6 +20,15 @@
 .projects-hero p{
     font-size: 22px;
     margin: 10px 0 0 0;
+}
+
+@media (max-width: 768px){
+    .projects-hero h2{
+        font-size: 32px;
+    }
+    .projects-hero p{
+        font-size: 18px;
+    }
 }
 
 .projects-grid{
@@ -46,7 +61,7 @@
 }
 }
 
-@media (max-width: 568){
+@media (max-width: 568px){
     .projects-grid{
     grid-template-columns: 1fr;
 }
