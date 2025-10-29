@@ -16,6 +16,7 @@ This React application serves as an architecture portfolio, showcasing projects,
 - ⚡ Carregamento rápido com Vite / Fast loading with Vite
 - 💾 Persistência de favoritos com sessionStorage / Favorites persistence with sessionStorage
 - 🎨 Componentes reutilizáveis / Reusable components
+- 🎯 Banner responsivo com múltiplos breakpoints / Responsive banner with multiple breakpoints
 
 ## Tecnologias Utilizadas / Technologies Used
 
@@ -147,6 +148,7 @@ Global context managing:
 1. **Teste de responsividade / Responsive Testing**:
    - Teste em diferentes navegadores (Chrome, Firefox, Safari, Edge) / Test in different browsers
    - Teste em diferentes tamanhos de tela (mobile, tablet, desktop) / Test different screen sizes
+   - Teste breakpoints específicos: 1024px, 768px, 480px, 260px / Test specific breakpoints
    - Teste em dispositivos móveis reais / Test on real mobile devices
 
 2. **Teste de funcionalidades / Functionality Testing**:
@@ -254,5 +256,7 @@ Este projeto é privado / This project is private.
 📝 **Última atualização / Last update**: Outubro 2024
 
 🚀 **Status**: Em produção / In production
+
+🎨 **Design System**: Responsivo com breakpoints em 1024px, 768px, 480px e 260px / Responsive with breakpoints at 1024px, 768px, 480px and 260px
 
 ⭐ Se este projeto te ajudou, considere dar uma estrela! / If this project helped you, consider giving it a star!
