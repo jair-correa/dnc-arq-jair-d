@@ -170,7 +170,8 @@ footer nav a {
   }
 
   footer .social-links img {
-    width: 20px;
+    width: 24px;
+    min-width: 20px;
     height: auto;
     display: inline-block;
   }
