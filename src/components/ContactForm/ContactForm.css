@@ -8,14 +8,7 @@
   align-items: center;
 }
 
-.contact-form h2 {
-  font-size: 50px;
-  line-height: 1.2;
-  color: #1c1c1c;
-}
-
 .contact-form form {
-  margin-top: 40px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -28,6 +21,10 @@
   gap: 39px;
   margin-top: 40px;
   width: 100%;
+}
+
+.contact-form .form-group:first-child {
+  margin-top: 0;
 }
 
 .contact-form .form-group:last-child {
@@ -81,10 +78,8 @@
 @media (max-width: 768px) {
   .contact-form {
     margin: 80px auto;
-  }
-
-  .contact-form h2 {
-    font-size: 28px;
+    width: 90%;
+    max-width: 90%;
   }
 
   .contact-form .form-group {

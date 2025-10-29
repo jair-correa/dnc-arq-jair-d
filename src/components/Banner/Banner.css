@@ -10,10 +10,23 @@
   position: relative;
 }
 
+/* Overlay specifically for contact.jpg to hide embedded "Contact Us" text */
+.banner[style*="contact.jpg"]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.6);
+  z-index: 0;
+}
+
 .banner .container {
   width: 100%;
   position: relative;
   z-index: 1;
+  padding: 0 30px;
 }
 
 .title-panel {
@@ -27,12 +40,17 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  position: relative;
+  z-index: 2;
 }
 
 .title-panel h1 {
   margin: 0;
   padding: 0;
   text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 768px) {
@@ -40,6 +58,10 @@
     height: 280px;
     background-size: cover;
     background-position: center;
+  }
+
+  .banner .container {
+    padding: 0 20px;
   }
 
   .title-panel {
@@ -52,5 +74,57 @@
 
   .title-panel h1 {
     font-size: 28px;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: 200px;
+  }
+
+  .banner .container {
+    padding: 0 15px;
+  }
+
+  .title-panel {
+    font-size: 22px;
+    height: 80px;
+    border-radius: 15px 15px 0 0;
+    padding: 0 10px;
+  }
+
+  .title-panel h1 {
+    font-size: 22px;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 260px) {
+  .banner {
+    height: 150px;
+  }
+
+  .banner .container {
+    padding: 0 10px;
+  }
+
+  .title-panel {
+    font-size: 16px;
+    height: 60px;
+    border-radius: 10px 10px 0 0;
+    padding: 0 5px;
+    max-width: 95%;
+  }
+
+  .title-panel h1 {
+    font-size: 16px;
+    white-space: normal;
+    word-break: break-word;
+  }
+  
+  /* Ensure overlay covers the entire banner for very small screens */
+  .banner[style*="contact.jpg"]::before {
+    background: rgba(255, 255, 255, 0.85);
   }
 }

@@ -70,8 +70,6 @@ function ContactForm() {
 
   return (
     <div className='contact-form'>
-      <h2>{languages?.[language]?.contact?.title || 'TITLE'}</h2>
-
       <form onSubmit={handleSubmit}>
         <div className='form-group'>
           <input className='form-input' type='text' id='name' name='name' placeholder={languages?.[language]?.contact?.pl1 || 'pl1'} value={formData.name} onChange={handleChange} />
