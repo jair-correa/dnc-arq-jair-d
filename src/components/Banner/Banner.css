@@ -6,10 +6,12 @@
   width: 100%;
   display: flex;
   align-items: flex-end;
+  overflow: hidden;
 }
 
 .banner .container {
   width: 100%;
+  position: relative;
 }
 
 .title-panel {
@@ -22,11 +24,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .title-panel h1 {
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -34,6 +38,8 @@
     height: 280px;
     display: flex;
     align-items: flex-end;
+    background-size: cover;
+    background-position: center;
   }
 
   .title-panel {
@@ -41,6 +47,7 @@
     height: 100px;
     max-width: 90%;
     border-radius: 20px 20px 0 0;
+    padding: 0 15px;
   }
 
   .title-panel h1 {
