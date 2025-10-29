@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 
 //CONTEXT
 import { AppContext } from '../../contexts/AppContext';
@@ -18,7 +17,7 @@ function Hero() {
       <div className='hero-text'>
         <h1>{languages?.[language]?.hero?.title || 'TITLE'}</h1>
         <p>{languages?.[language]?.hero?.subtitle || 'SUBTITLE'}</p>
-        <Link>
+        <Link to={'/about'}>
           <Button buttonStyle='secondary' arrow>
             {languages?.[language]?.hero?.cta || 'CTA'}
           </Button>
