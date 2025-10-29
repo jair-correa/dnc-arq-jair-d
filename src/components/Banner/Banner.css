@@ -38,10 +38,8 @@
 @media (max-width: 768px) {
   .banner {
     height: 280px;
-    display: flex;
-    align-items: flex-end;
     background-size: cover;
-    background-position: center bottom;
+    background-position: center;
   }
 
   .title-panel {
