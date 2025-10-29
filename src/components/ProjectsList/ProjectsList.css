@@ -23,6 +23,9 @@
 }
 
 @media (max-width: 768px){
+    .projects-hero{
+        text-align: center;
+    }
     .projects-hero h2{
         font-size: 32px;
     }
