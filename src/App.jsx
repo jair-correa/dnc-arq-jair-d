@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 
 //PAGES
 import Home from './pages/Home';
@@ -19,15 +20,17 @@ function App() {
   }
 
   return (
-    <Router>
-      <ScrollToTop />
-      <Routes>
-        <Route path='/' element={<Home />}></Route>
-        <Route path='/about' element={<About />}></Route>
-        <Route path='/projects' element={<Projects />}></Route>
-        <Route path='/contact' element={<Contact />}></Route>
-      </Routes>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <ScrollToTop />
+        <Routes>
+          <Route path='/' element={<Home />}></Route>
+          <Route path='/about' element={<About />}></Route>
+          <Route path='/projects' element={<Projects />}></Route>
+          <Route path='/contact' element={<Contact />}></Route>
+        </Routes>
+      </Router>
+    </HelmetProvider>
   );
 }
 

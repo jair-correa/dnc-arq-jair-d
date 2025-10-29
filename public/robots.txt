@@ -1,0 +1,9 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Disallow admin or private pages (if any in future)
+# Disallow: /admin/
+
+# Sitemap
+Sitemap: https://dnc-arq-jair-d.vercel.app/sitemap.xml
