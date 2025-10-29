@@ -43,3 +43,16 @@
   color: #666;
   pointer-events: none;
 }
+
+/*UNSTYLED - Transparent buttons*/
+.button.unstyled {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: inherit;
+}
+
+.button.unstyled:hover {
+  background-color: transparent;
+  opacity: 0.8;
+}

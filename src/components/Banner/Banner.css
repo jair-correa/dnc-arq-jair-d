@@ -21,9 +21,13 @@
     }
     
     .title-panel{
-        font-size: 32px;
+        font-size: 28px;
         height: 100px;
         max-width: 90%;
         border-radius: 20px 20px 0 0;
+    }
+    
+    .title-panel h1{
+        font-size: 28px;
     }
 }

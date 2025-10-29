@@ -37,7 +37,7 @@ function Footer() {
     { to: '/projects', label: languages?.[language]?.menu?.projects || 'Projects' },
     { to: '/contact', label: languages?.[language]?.menu?.contact || 'Contact' },
   ];
-  const changeLanguage = (country) => {
+  const changeLanguage = country => {
     if (appContext?.setLanguage) {
       appContext.setLanguage(country);
     }
