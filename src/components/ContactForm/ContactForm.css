@@ -3,6 +3,9 @@
   max-width: 797px;
   width: 100%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact-form h2 {
@@ -25,6 +28,10 @@
   gap: 39px;
   margin-top: 40px;
   width: 100%;
+}
+
+.contact-form .form-group:last-child {
+  justify-content: flex-end;
 }
 
 /* Input e Textarea */
@@ -50,11 +57,6 @@
   width: 100%;
 }
 
-/* Grupo do botão */
-.contact-form .form-group:last-child {
-  justify-content: flex-end;
-}
-
 .contact-form button {
   padding: 14px 32px;
   border: none;
@@ -77,6 +79,10 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
+  .contact-form {
+    margin: 80px auto;
+  }
+
   .contact-form h2 {
     font-size: 28px;
   }
@@ -85,7 +91,7 @@
     flex-direction: column;
     gap: 20px;
   }
-  
+
   .contact-form .form-input {
     font-size: 16px;
   }

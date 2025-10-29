@@ -23,7 +23,7 @@ function ContactForm() {
   const [formSubmitLoading, setFormSubmitLoading] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async e => {
     e.preventDefault();
 
     if (isFormValid) {
@@ -54,13 +54,13 @@ function ContactForm() {
   };
 
   useEffect(() => {
-    const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    const isValidEmail = email => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     const isValid = formData.name.trim() && formData.email.trim() && isValidEmail(formData.email) && formData.message.trim();
 
     setIsFormValid(Boolean(isValid));
   }, [formData]);
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -69,20 +69,20 @@ function ContactForm() {
   };
 
   return (
-    <div className='contact-form d-flex fd-column al-center'>
+    <div className='contact-form'>
       <h2>{languages?.[language]?.contact?.title || 'TITLE'}</h2>
 
       <form onSubmit={handleSubmit}>
-        <div className='d-flex form-group'>
+        <div className='form-group'>
           <input className='form-input' type='text' id='name' name='name' placeholder={languages?.[language]?.contact?.pl1 || 'pl1'} value={formData.name} onChange={handleChange} />
           <input className='form-input' type='email' id='email' name='email' placeholder={languages?.[language]?.contact?.pl2 || 'pl2'} value={formData.email} onChange={handleChange} />
         </div>
 
-        <div className='d-flex form-group'>
+        <div className='form-group'>
           <textarea className='form-input' id='message' name='message' placeholder={languages?.[language]?.contact?.pl3 || 'pl3'} value={formData.message} onChange={handleChange} rows='4'></textarea>
         </div>
 
-        <div className='al-center d-flex jc-end form-group'>
+        <div className='form-group'>
           <Button type='submit' buttonStyle='secondary' disabled={!isFormValid || formSubmitLoading}>
             {languages?.[language]?.general?.send || 'send'}
           </Button>
