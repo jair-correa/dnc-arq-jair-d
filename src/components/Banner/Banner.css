@@ -7,11 +7,24 @@
   display: flex;
   align-items: flex-end;
   overflow: hidden;
+  position: relative;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
+  z-index: 1;
 }
 
 .banner .container {
   width: 100%;
   position: relative;
+  z-index: 2;
 }
 
 .title-panel {
@@ -39,7 +52,11 @@
     display: flex;
     align-items: flex-end;
     background-size: cover;
-    background-position: center;
+    background-position: center bottom;
+  }
+
+  .banner::before {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%);
   }
 
   .title-panel {
