@@ -248,7 +248,7 @@ Este projeto é privado / This project is private.
 
 ## Agradecimentos / Acknowledgments
 
-- DNC (Digital Innovation One) pela API de dados / for the data API
+- DNC (Dinamica Cursos) pela API de dados / for the data API
 - Comunidade React / React Community
 
 ---
